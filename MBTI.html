@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>如果你身在維特的故事｜MBTI 劇情測驗</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <div class="brand">
+          <h1>如果你身在維特的故事｜MBTI 劇情測驗</h1>
+          <p>10 題 AB，憑直覺選。最後會得到 MBTI + 維特指數（N+F+P）。</p>
+        </div>
+      </div>
+
+      <div class="card" id="card">
+        <div class="topbar">
+          <div class="progress">
+            <div class="bar"><div id="barFill"></div></div>
+            <div class="txt" id="progTxt">第 1 / 10 題</div>
+          </div>
+          <button class="btn" id="restartBtn" title="重來一次">重測</button>
+        </div>
+
+        <div class="content" id="quiz">
+          <div class="qno" id="qNo">Q1</div>
+          <h2 class="qtitle" id="qTitle"></h2>
+
+          <div class="choices">
+            <button class="choice" id="btnA">
+              <span id="textA"></span>
+              <small>選 A</small>
+            </button>
+            <button class="choice" id="btnB">
+              <span id="textB"></span>
+              <small>選 B</small>
+            </button>
+          </div>
+
+          <div class="nav">
+            <button class="btn" id="backBtn">← 上一題</button>
+            <div class="hint" id="hint">提示：越快越準（真的）。</div>
+            <button class="btn" id="skipBtn" title="不建議，但可以跳過">
+              跳過 →
+            </button>
+          </div>
+        </div>
+
+        <div class="result" id="result">
+          <h2>你的結果：<span id="mbti" class="mbti"></span></h2>
+
+          <div class="pillrow">
+            <div class="pill">
+              維特指數：<b id="wertherIdx" class="werther"></b> / 10
+            </div>
+            <div class="pill">傾向強度：<b id="strength"></b></div>
+            <div class="pill">分享用：<b id="shareTextMini"></b></div>
+          </div>
+
+          <div class="grid">
+            <div class="panel">
+              <h3>你的故事走向</h3>
+              <p id="story"></p>
+              <div class="mini" id="miniNote"></div>
+            </div>
+
+            <div class="panel">
+              <h3>分數明細</h3>
+              <div class="kvs" id="detail"></div>
+            </div>
+          </div>
+
+          <div class="nav" style="margin-top: 14px">
+            <button class="btn" id="copyBtn">複製結果文字</button>
+            <button class="btn" id="againBtn">再測一次</button>
+            <div class="hint" id="copyHint"></div>
+          </div>
+
+          <div class="footer">
+            ※
+            這是以文學情境做的趣味測驗，結果僅供娛樂與自我探索，不是臨床或科學診斷，因為我不是專業的。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
